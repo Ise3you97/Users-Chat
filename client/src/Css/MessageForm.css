@@ -1,0 +1,64 @@
+/* Css/MessageForm.css */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px ;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
+  width: 88%; /* Asegura que el formulario ocupe el 100% del ancho del contenedor padre */
+  max-width: 400px; /* Tamaño máximo del contenedor del formulario */
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+  transition: 1s ease;
+}
+
+
+
+/* Etiquetas del formulario */
+label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Campos del formulario */
+input[type="text"] {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  margin-bottom: 15px; /* Espacio entre campos */
+}
+
+/* Botón de envío */
+button {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+  width: 100%; /* Botón ocupa todo el ancho del contenedor */
+}
+
+/* Estado hover del botón */
+button:hover {
+  background-color: #0056b3;
+}
+
+.hidden {
+  transform: translateY(0%); /* Mueve el formulario fuera de vista hacia abajo */
+  opacity: 1; /* Hace el formulario transparente */
+  height: 0px;
+}
+.form-container:hover{
+  transform: translateY(0); /* Mueve el formulario fuera de vista hacia abajo */
+  height: 190px;
+
+}

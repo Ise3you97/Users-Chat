@@ -1,0 +1,33 @@
+.message-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow: visible;
+}
+
+.timestamp {
+  font-size: 0.75em;
+  color: rgb(253, 5, 5);
+  position: absolute;
+  bottom: 5px;
+  right: 50px;
+  text-align: right;
+}
+
+.username {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.message-content {
+  color: #000000;
+  flex: auto;
+  padding-left: 10px;
+}

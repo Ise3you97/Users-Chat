@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: client
+    env: static
+    staticPublishPath: client/build
+    buildCommand: cd client && npm install && npm run build
+    pullRequestPreviewsEnabled: true

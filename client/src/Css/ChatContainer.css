@@ -1,0 +1,160 @@
+/* Css/ChatContainer.css */
+
+.chat-container {
+  width: 360px;
+  max-width: 100%;
+  height: 600px;
+  max-height: 90vh;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+form {
+  z-index: 2;
+}
+
+h1 {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  z-index: 2;
+  position: relative;
+}
+
+.messages-container {
+  padding: 10px;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+
+.message-item {
+  background-color: #f1f1f1;
+  margin: 3px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.message-item::after {
+  content: "Mencionar";
+  position: absolute;
+  bottom: 70%;
+  left: 80%;
+  transform: translateX(-50%);
+  background-color: #000000;
+  color: #f1eaea;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.message-item:hover::after {
+  opacity: 0.5;
+}
+
+.message-item:hover {
+  transform: translate(5px, 0) rotateX(0deg) rotateY(15deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.message-item .timestamp {
+  font-size: 0.60em;
+  color: gray;
+  display: block;
+  text-align: left;
+}
+
+.bubbles {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: bubble-animation 1s infinite;
+}
+
+.bubble:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  background: #ffdddd;
+  left: 10%;
+  animation-duration: 40s;
+}
+
+.bubble:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  background: #ddffdd;
+  left: 30%;
+  animation-duration: 35s;
+}
+
+.bubble:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  background: #ddddff;
+  left: 50%;
+  animation-duration: 38s;
+}
+
+.bubble:nth-child(4) {
+  width: 50px;
+  height: 50px;
+  background: #ffffdd;
+  left: 70%;
+  animation-duration: 32s;
+}
+
+.bubble:nth-child(5) {
+  width: 70px;
+  height: 70px;
+  background: #ddffff;
+  left: 85%;
+  animation-duration: 30s;
+}
+
+@keyframes bubble-animation {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 0;
+  }
+}
