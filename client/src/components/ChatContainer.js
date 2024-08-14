@@ -25,7 +25,7 @@ const ChatContainer = () => {
 
   useEffect(() => {
     const fetchMessages = async () => {
-      const result = await axios.get('http://localhost:5000/messages');
+      const result = await axios.get('http://localhost:4000/messages');
       setMessages(result.data);
     };
 
@@ -42,7 +42,7 @@ const ChatContainer = () => {
       return;
     }
 
-    await axios.post('http://localhost:5000/messages', newMessage);
+    await axios.post('http://localhost:4000/messages', newMessage);
     setMessage('');
   };
 
