@@ -38,7 +38,7 @@ const ChatContainer = () => {
   const handleSubmit = async (newMessage) => {
     const usernamePattern = /^[A-Z][^\s]*$/;
     if (!usernamePattern.test(newMessage.username)) {
-      alert('Username must start with an uppercase letter and cannot contain spaces.');
+      alert('El nombre de usuario debe comenzar con una letra mayúscula y no puede contener espacios.');
       return;
     }
 

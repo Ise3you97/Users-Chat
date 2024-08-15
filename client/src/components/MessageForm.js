@@ -1,3 +1,4 @@
+// src/components/MessageForm.js
 import React, { useState, useEffect } from 'react';
 import { userNameSelect, handleClick } from './MessageItem';
 import '../Css/MessageForm.css';
@@ -37,7 +38,7 @@ const MessageForm = ({ onSubmit }) => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">Mensaje</label>
           <input
             id="message"
             type="text"
