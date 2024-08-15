@@ -25,7 +25,7 @@ const ChatContainer = () => {
 
   useEffect(() => {
     const fetchMessages = async () => {
-      const result = await axios.get('http://localhost:4000/messages');
+      const result = await axios.get('https://backen-for-chat.onrender.com/messages');
       setMessages(result.data);
     };
 
@@ -42,7 +42,7 @@ const ChatContainer = () => {
       return;
     }
 
-    await axios.post('http://localhost:4000/messages', newMessage);
+    await axios.post('https://backen-for-chat.onrender.com/messages', newMessage);
     setMessage('');
   };
 
