@@ -1,4 +1,3 @@
-// src/components/MessageForm.js
 import React, { useState, useEffect } from 'react';
 import { userNameSelect, handleClick } from './MessageItem';
 import '../Css/MessageForm.css';
@@ -8,12 +7,14 @@ const MessageForm = ({ onSubmit }) => {
   const [message, setMessage] = useState('');
   const [isHidden, setIsHidden] = useState(false);
 
+  // UseEffect que actualiza el mensaje con el nombre de usuario seleccionado
   useEffect(() => {
     if (userNameSelect) {
       setMessage(`${userNameSelect} : `);
     }
   }, [userNameSelect]);
 
+  // Función para manejar el envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username && message) {

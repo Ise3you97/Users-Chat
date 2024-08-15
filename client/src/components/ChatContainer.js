@@ -1,4 +1,3 @@
-// src/components/ChatContainer.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MessageItem from './MessageItem';
@@ -10,6 +9,7 @@ const ChatContainer = () => {
   const [message, setMessage] = useState('');
   const [backgroundColor, setBackgroundColor] = useState('#ffffff');
 
+  // Función para formatear el texto del mensaje, convirtiendo URLs en enlaces clicables
   const formatMessage = (text) => {
     const urlPattern = /(https?:\/\/[^\s]+)/g;
     return text.split(urlPattern).map((part, index) =>
@@ -23,6 +23,7 @@ const ChatContainer = () => {
     );
   };
 
+  // UseEffect para cargar los mensajes al montar el componente y para actualizarlos periódicamente
   useEffect(() => {
     const fetchMessages = async () => {
       const result = await axios.get('https://backen-for-chat.onrender.com/messages');
@@ -35,6 +36,7 @@ const ChatContainer = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  // Función para manejar el envío de un nuevo mensaje
   const handleSubmit = async (newMessage) => {
     const usernamePattern = /^[A-Z][^\s]*$/;
     if (!usernamePattern.test(newMessage.username)) {

@@ -1,5 +1,4 @@
-/* Css/MessageForm.css */
-
+/* Estilos para el contenedor del formulario */
 .form-container {
   display: flex;
   flex-direction: column;
@@ -7,15 +6,13 @@
   border-radius: 12px;
   background-color: #ffffff;
   box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
-  width: 88%; /* Asegura que el formulario ocupe el 100% del ancho del contenedor padre */
-  max-width: 400px; /* Tamaño máximo del contenedor del formulario */
-  margin: 0 auto; /* Centra el formulario horizontalmente */
+  width: 88%; 
+  max-width: 400px; 
+  margin: 0 auto; 
   transition: 1s ease;
 }
 
-
-
-/* Etiquetas del formulario */
+/* Estilos para las etiquetas del formulario */
 label {
   font-size: 14px;
   color: #555;
@@ -23,18 +20,18 @@ label {
   display: block;
 }
 
-/* Campos del formulario */
+/* Estilos para los campos de texto del formulario */
 input[type="text"] {
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 16px;
   width: 100%;
-  box-sizing: border-box; /* Incluye padding y border en el ancho total */
-  margin-bottom: 15px; /* Espacio entre campos */
+  box-sizing: border-box;
+  margin-bottom: 15px; 
 }
 
-/* Botón de envío */
+/* Estilos para el botón de envío del formulario */
 button {
   padding: 12px;
   background-color: #007bff;
@@ -43,22 +40,25 @@ button {
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease; /* Transición suave para el hover */
-  width: 100%; /* Botón ocupa todo el ancho del contenedor */
+  transition: background-color 0.3s ease; 
+  width: 100%; 
 }
 
-/* Estado hover del botón */
+/* Estilos para el botón en estado hover */
 button:hover {
   background-color: #0056b3;
 }
 
+/* Estilos para el formulario cuando está oculto */
 .hidden {
-  transform: translateY(0%); /* Mueve el formulario fuera de vista hacia abajo */
-  opacity: 1; /* Hace el formulario transparente */
+  transform: translateY(0%); 
+  opacity: 1; 
   height: 0px;
 }
+
+/* Estilos para el formulario al pasar el mouse sobre él */
 .form-container:hover{
-  transform: translateY(0); /* Mueve el formulario fuera de vista hacia abajo */
+  transform: translateY(0); 
   height: 190px;
 
 }
