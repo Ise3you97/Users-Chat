@@ -7,7 +7,7 @@ const chatSchema = new mongoose.Schema({
   timestamp: {
     type: Date,
     default: Date.now,
-    expires: 3600
+    expires: 172800 //2 dias
   },
 });
 
